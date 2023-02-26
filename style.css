@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    position: relative;
+    background-color: chocolate;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: solid 3px black;
+    border-radius: 50%;
+    background-color: burlywood;
+    animation-name: moving;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    /*animation: moving 3s ease-in infinite alternate-reverse;*/
+    /*transform:moving rotate(45deg);*/
+}
+@keyframes moving {
+    0%{
+        background-color: rgb(74, 172, 228);
+        transform: translateY(100px);
+    }
+    100%{
+        background-color: rgb(113, 36, 185);
+        transform: translateY(-100px);
+    }
+}
